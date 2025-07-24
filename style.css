@@ -1,0 +1,137 @@
+/* Genel ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Daha sade bir arka plan rengi */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #333; /* Daha sade bir yazı rengi */
+}
+
+/* Kontrol butonları */
+.controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.controls button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.controls button.delete-all,
+.controls button.delete-selected-btn {
+    background-color: #f44336;
+}
+
+.controls button:hover {
+    background-color: #388e3c; /* Daha sade hover efekti */
+}
+
+.font-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Notlar konteyneri */
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+/* Not kutuları */
+.note {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 150px; /* Minimum yükseklik */
+    padding: 0.5rem;
+    overflow: hidden;
+    transition: height 0.3s ease, font-weight 0.3s ease; /* Animasyon */
+    width: 500px;
+}
+
+/* Araç çubuğu */
+.note .tools {
+    background-color: #4caf50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.note .tools button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.note .tools button.bold {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.note .tools button.bold:hover {
+    background-color: #388e3c; /* Hover efekti */
+}
+
+.note .tools select {
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+.note textarea {
+    width: 485px;
+    height: auto; /* İçeriğe göre yükseklik */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    resize: none;
+    overflow-y: auto; /* Taşmayı önler */
+}
+.note .hidden {
+    display: none;
+}
+.note .tools input.note-font-size {
+    margin-left: 0.5rem;
+}
